@@ -1,34 +1,74 @@
-# \# SOC Analyst Journey (Ruta de Analista SOC)
+\# Proyecto SOC - Simulación de Análisis, Detección y Respuesta
 
-# 
 
-# Este repositorio documenta mi aprendizaje práctico en ciberseguridad enfocado a Blue Team y entornos SOC.
 
-# 
+\## Descripción
 
-# \## Áreas de trabajo
+Este proyecto documenta la simulación de un caso real de seguridad en un entorno SOC, donde se analiza un ataque, se crea una detección y se define una respuesta estructurada.
 
-# \- Análisis de logs
 
-# \- Ingeniería de detecciones
 
-# \- Playbooks de respuesta a incidentes
+\## Objetivo
 
-# \- OSINT (inteligencia de fuentes abiertas)
+Demostrar capacidades prácticas en:
 
-# \- Inteligencia de amenazas
+\- Análisis de logs
 
-# 
+\- Detección de amenazas
 
-# \## Objetivo
+\- Respuesta a incidentes
 
-# Construir un portfolio práctico de ciberseguridad que pueda demostrar habilidades reales en GitHub, LinkedIn y CV.
 
-# 
 
-# \## Nota importante
+\## Caso desarrollado
 
-# Todo el contenido de este repositorio se basa en información pública, escenarios de laboratorio o documentación genérica.  
+Se ha simulado un ataque de fuerza bruta contra un servicio SSH.
 
-# No se incluye información sensible de entornos reales de empresa.
+
+
+A partir de este escenario se ha trabajado en tres fases:
+
+
+
+1\. Análisis de logs
+
+2\. Creación de detección
+
+3\. Desarrollo de playbook de respuesta
+
+
+
+\## Estructura del proyecto
+
+
+
+\- `analisis-logs/` → análisis del ataque
+
+\- `detecciones/` → lógica de detección
+
+\- `playbooks/` → respuesta a incidentes
+
+\- `notas-diarias/` → seguimiento del aprendizaje
+
+\- `inteligencia-amenazas/` → contexto de amenazas
+
+
+
+\## Flujo del caso
+
+
+
+Atacante → Servicio SSH → Logs → Análisis → Detección → Respuesta
+
+
+
+\## Enfoque
+
+Este proyecto está diseñado como un ejercicio práctico de Blue Team orientado a simular el trabajo real de un analista SOC.
+
+
+
+\## Nota
+
+No se utiliza información sensible ni datos reales de entornos empresariales.
 
