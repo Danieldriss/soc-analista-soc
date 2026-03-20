@@ -56,3 +56,21 @@ Media-Alta
 
 Escalar a análisis manual
 
+
+
+\## Escenario de detección
+
+Basado en el análisis previo, se define una detección para identificar intentos de acceso no autorizados mediante fuerza bruta.
+
+
+
+\## Ejemplo de evento
+
+Evento de autenticación fallida repetido múltiples veces desde la misma IP.
+
+
+
+\## Razonamiento
+
+Una alta frecuencia de eventos de tipo "Failed password" es un indicador claro de intento de acceso automatizado.
+

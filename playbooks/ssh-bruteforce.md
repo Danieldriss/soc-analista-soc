@@ -62,3 +62,15 @@ Se detectan múltiples intentos fallidos de login SSH desde una misma IP.
 
 \- Importancia de hardening
 
+
+
+\## Contexto del incidente
+
+La detección se activa tras identificar múltiples intentos fallidos de autenticación SSH desde una misma IP.
+
+
+
+\## Decisión operativa
+
+Se prioriza el bloqueo de la IP y la revisión de accesos para evitar compromiso del sistema.
+

@@ -62,3 +62,39 @@ Se trata de un intento de intrusión mediante fuerza bruta.
 
 \- La repetición es un indicador crítico
 
+
+
+\## Escenario simulado
+
+Se ha simulado un servidor Linux con servicio SSH expuesto a red, donde un atacante intenta acceder mediante múltiples intentos de autenticación.
+
+
+
+\## Evidencias (logs simulados)
+
+Mar 23 10:15:01 server sshd\[1234]: Failed password for root from 192.168.1.50
+
+Mar 23 10:15:03 server sshd\[1234]: Failed password for root from 192.168.1.50
+
+Mar 23 10:15:05 server sshd\[1234]: Failed password for admin from 192.168.1.50
+
+
+
+\## Interpretación personal
+
+Los intentos repetidos desde la misma IP en intervalos muy cortos indican un comportamiento automatizado típico de ataques de fuerza bruta.
+
+
+
+\## Decisión
+
+Se considera necesario generar una alerta cuando se detecten múltiples intentos fallidos desde una misma IP en un corto periodo de tiempo.
+
+
+
+\## Flujo del ataque
+
+
+
+\[Atacante] → \[Servidor SSH] → \[Logs] → \[Detección] → \[Respuesta]
+
