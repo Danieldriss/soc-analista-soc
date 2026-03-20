@@ -1,74 +1,43 @@
-\# Proyecto SOC - Simulación de Análisis, Detección y Respuesta
+# Proyecto SOC - Casos prácticos de análisis, detección y respuesta
 
+## Descripción
+Este repositorio recopila casos prácticos de ciberseguridad orientados a un entorno SOC.
 
+Cada caso está documentado en un único archivo e incluye el flujo completo de análisis, detección, respuesta y explicación para estudio.
 
-\## Descripción
-
-Este proyecto documenta la simulación de un caso real de seguridad en un entorno SOC, donde se analiza un ataque, se crea una detección y se define una respuesta estructurada.
-
-
-
-\## Objetivo
-
+## Objetivo
 Demostrar capacidades prácticas en:
+- Análisis de eventos de seguridad
+- Identificación de amenazas
+- Diseño de detecciones
+- Respuesta a incidentes
+- Estudio y comprensión de casos reales simulados
 
-\- Análisis de logs
+## Metodología
+Cada caso del repositorio sigue siempre la misma estructura:
 
-\- Detección de amenazas
+1. Contexto
+2. Escenario simulado
+3. Evidencias (logs)
+4. Análisis
+5. Detección
+6. Respuesta
+7. Explicación para estudio
+8. Puntos clave
 
-\- Respuesta a incidentes
+## Caso desarrollado actualmente
+- Ataque de fuerza bruta SSH
 
+## Estructura del proyecto
+- `analisis-logs/` → casos completos del proyecto, un archivo por caso
+- `notas-diarias/` → seguimiento del aprendizaje y progreso
+- `inteligencia-amenazas/` → contexto adicional sobre amenazas y técnicas
 
+## Flujo general de trabajo
+Ataque → Evidencias → Análisis → Detección → Respuesta → Aprendizaje
 
-\## Caso desarrollado
+## Enfoque del repositorio
+Este proyecto está pensado como un portfolio práctico y, al mismo tiempo, como material de estudio para repasar casos de seguridad de forma clara y estructurada.
 
-Se ha simulado un ataque de fuerza bruta contra un servicio SSH.
-
-
-
-A partir de este escenario se ha trabajado en tres fases:
-
-
-
-1\. Análisis de logs
-
-2\. Creación de detección
-
-3\. Desarrollo de playbook de respuesta
-
-
-
-\## Estructura del proyecto
-
-
-
-\- `analisis-logs/` → análisis del ataque
-
-\- `detecciones/` → lógica de detección
-
-\- `playbooks/` → respuesta a incidentes
-
-\- `notas-diarias/` → seguimiento del aprendizaje
-
-\- `inteligencia-amenazas/` → contexto de amenazas
-
-
-
-\## Flujo del caso
-
-
-
-Atacante → Servicio SSH → Logs → Análisis → Detección → Respuesta
-
-
-
-\## Enfoque
-
-Este proyecto está diseñado como un ejercicio práctico de Blue Team orientado a simular el trabajo real de un analista SOC.
-
-
-
-\## Nota
-
+## Nota
 No se utiliza información sensible ni datos reales de entornos empresariales.
-
