@@ -1,94 +1,168 @@
-\# Análisis de logs - Ataque SSH Brute Force
+\# Caso 1 - Ataque de fuerza bruta SSH
 
 
 
-\## Objetivo
+\## 1. Contexto
 
-Identificar actividad sospechosa en logs de autenticación SSH.
-
-
-
-\## Escenario
-
-Se observa un volumen elevado de intentos fallidos de login en un servidor.
+El servicio SSH permite el acceso remoto a sistemas Linux mediante autenticación de usuario y contraseña o claves.
 
 
 
-\## Observaciones
-
-\- Múltiples intentos fallidos de autenticación
-
-\- Repetición desde una misma IP
-
-\- Intervalos de tiempo muy cortos entre intentos
+Es un servicio crítico y uno de los principales objetivos de ataques automatizados en entornos reales.
 
 
 
-\## Indicadores detectados
-
-\- Evento: "Failed password"
-
-\- Alta frecuencia de eventos
-
-\- Origen repetido
+\---
 
 
 
-\## Análisis
+\## 2. Escenario simulado
 
-El patrón observado corresponde a un ataque de fuerza bruta contra el servicio SSH.
-
-
-
-\## Impacto potencial
-
-\- Acceso no autorizado si se compromete una cuenta
-
-\- Movimiento lateral
-
-\- Escalada de privilegios
+Se ha simulado un servidor Linux con el puerto SSH expuesto.
 
 
 
-\## Conclusión
-
-Se trata de un intento de intrusión mediante fuerza bruta.
+Un atacante externo intenta acceder al sistema realizando múltiples intentos de autenticación desde la misma IP.
 
 
 
-\## Lecciones aprendidas
-
-\- Los logs de autenticación son clave
-
-\- La repetición es un indicador crítico
+\---
 
 
 
-\## Escenario simulado
-
-Se ha simulado un servidor Linux con servicio SSH expuesto a red, donde un atacante intenta acceder mediante múltiples intentos de autenticación.
+\## 3. Evidencias (logs simulados)
 
 
 
-\## Evidencias (logs simulados)
+Mar 23 10:15:01 server sshd\[1234]: Failed password for root from 192.168.1.50  
 
-Mar 23 10:15:01 server sshd\[1234]: Failed password for root from 192.168.1.50
+Mar 23 10:15:03 server sshd\[1234]: Failed password for root from 192.168.1.50  
 
-Mar 23 10:15:03 server sshd\[1234]: Failed password for root from 192.168.1.50
-
-Mar 23 10:15:05 server sshd\[1234]: Failed password for admin from 192.168.1.50
+Mar 23 10:15:05 server sshd\[1234]: Failed password for admin from 192.168.1.50  
 
 
 
-\## Interpretación personal
-
-Los intentos repetidos desde la misma IP en intervalos muy cortos indican un comportamiento automatizado típico de ataques de fuerza bruta.
+\---
 
 
 
-\## Decisión
+\## 4. Análisis
 
-Se considera necesario generar una alerta cuando se detecten múltiples intentos fallidos desde una misma IP en un corto periodo de tiempo.
+Se observa una alta frecuencia de intentos fallidos de autenticación.
+
+
+
+Todos los intentos provienen de la misma IP y se realizan en intervalos muy cortos.
+
+
+
+Este comportamiento no corresponde a un usuario legítimo, sino a un proceso automatizado.
+
+
+
+Se identifica como un ataque de fuerza bruta.
+
+
+
+\---
+
+
+
+\## 5. Detección
+
+Se debe generar una alerta cuando:
+
+
+
+\- Se detecten múltiples intentos fallidos de login
+
+\- Desde una misma IP
+
+\- En un corto periodo de tiempo
+
+
+
+Evento clave:
+
+\- "Failed password"
+
+
+
+\---
+
+
+
+\## 6. Respuesta
+
+
+
+Acciones recomendadas:
+
+
+
+1\. Validar la alerta
+
+2\. Identificar la IP atacante
+
+3\. Revisar si ha habido accesos exitosos
+
+4\. Bloquear la IP
+
+5\. Revisar configuración SSH
+
+6\. Aplicar medidas de seguridad (MFA, claves SSH)
+
+
+
+\---
+
+
+
+\## 7. Explicación para estudio
+
+Un ataque de fuerza bruta consiste en probar muchas combinaciones de contraseñas hasta encontrar una válida.
+
+
+
+En los logs se identifica por:
+
+
+
+\- repetición de intentos fallidos
+
+\- misma IP
+
+\- intervalos cortos
+
+
+
+Esto indica automatización.
+
+
+
+Es uno de los ataques más comunes contra servicios expuestos.
+
+
+
+\---
+
+
+
+\## 8. Puntos clave
+
+
+
+\- SSH es un servicio crítico y muy atacado
+
+\- La repetición es el principal indicador
+
+\- La detección se basa en frecuencia + origen
+
+\- La respuesta debe ser rápida para evitar compromiso
+
+
+
+\---
 
 
 
