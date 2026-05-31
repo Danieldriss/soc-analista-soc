@@ -1,43 +1,78 @@
 # Proyecto SOC - Casos prácticos de análisis, detección y respuesta
 
 ## Descripción
-Este repositorio recopila casos prácticos de ciberseguridad orientados a un entorno SOC.
 
-Cada caso está documentado en un único archivo e incluye el flujo completo de análisis, detección, respuesta y explicación para estudio.
+Este repositorio recopila distintos casos prácticos orientados al análisis de eventos de seguridad en un entorno SOC (Security Operations Center).
 
-## Objetivo
-Demostrar capacidades prácticas en:
-- Análisis de eventos de seguridad
-- Identificación de amenazas
-- Diseño de detecciones
-- Respuesta a incidentes
-- Estudio y comprensión de casos reales simulados
+El objetivo del proyecto es documentar escenarios habituales de ciberseguridad desde la perspectiva de un analista Blue Team, incluyendo el análisis de los eventos, los mecanismos de detección y las posibles acciones de respuesta.
+
+Además de servir como portfolio técnico, el repositorio está diseñado como material de estudio para reforzar conocimientos relacionados con monitorización, detección de amenazas y respuesta ante incidentes.
+
+---
 
 ## Metodología
-Cada caso del repositorio sigue siempre la misma estructura:
+
+Todos los casos siguen una estructura común:
 
 1. Contexto
 2. Escenario simulado
-3. Evidencias (logs)
+3. Evidencias
 4. Análisis
 5. Detección
 6. Respuesta
 7. Explicación para estudio
 8. Puntos clave
 
-## Caso desarrollado actualmente
-- Ataque de fuerza bruta SSH
+Esta metodología permite mantener la consistencia entre los distintos casos y facilitar su consulta posterior.
+
+---
+
+## Casos desarrollados
+
+| Caso                  | Descripción                                              |
+| --------------------- | -------------------------------------------------------- |
+| SSH Brute Force       | Intentos repetidos de acceso mediante autenticación SSH  |
+| Phishing              | Robo de credenciales mediante ingeniería social          |
+| Malware Execution     | Ejecución de software malicioso en un sistema            |
+| Suspicious PowerShell | Uso sospechoso de PowerShell para actividades maliciosas |
+| C2 Connection         | Comunicación con servidores de comando y control         |
+| Nmap Reconnaissance   | Actividades de reconocimiento y escaneo de red           |
+| Ransomware            | Análisis general de amenazas de tipo ransomware          |
+
+---
 
 ## Estructura del proyecto
-- `analisis-logs/` → casos completos del proyecto, un archivo por caso
-- `notas-diarias/` → seguimiento del aprendizaje y progreso
-- `inteligencia-amenazas/` → contexto adicional sobre amenazas y técnicas
 
-## Flujo general de trabajo
-Ataque → Evidencias → Análisis → Detección → Respuesta → Aprendizaje
+```text
+analisis-logs/
+inteligencia-amenazas/
+notas-diarias/
+```
 
-## Enfoque del repositorio
-Este proyecto está pensado como un portfolio práctico y, al mismo tiempo, como material de estudio para repasar casos de seguridad de forma clara y estructurada.
+* **analisis-logs/** → Casos prácticos principales del proyecto.
+* **inteligencia-amenazas/** → Información complementaria sobre amenazas relevantes.
+* **notas-diarias/** → Registro del progreso y evolución del aprendizaje.
 
-## Nota
-No se utiliza información sensible ni datos reales de entornos empresariales.
+---
+
+## Relación con el Homelab
+
+Este proyecto complementa el laboratorio de seguridad desarrollado en:
+
+https://github.com/Danieldriss/homelab-network-security
+
+Mientras que el Homelab se centra en la infraestructura, la generación de eventos y las evidencias prácticas, este repositorio documenta el análisis técnico, la detección y la respuesta asociada a cada caso.
+
+---
+
+## Estado del proyecto
+
+El proyecto se encuentra finalizado a nivel documental.
+
+En futuras fases se añadirán evidencias prácticas obtenidas directamente del laboratorio para complementar los casos ya desarrollados.
+
+---
+
+## Objetivo final
+
+Desarrollar una base de conocimiento reutilizable orientada a análisis SOC, Blue Team y detección de amenazas, combinando teoría, práctica y documentación técnica.

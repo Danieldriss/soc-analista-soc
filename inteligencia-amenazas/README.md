@@ -1,10 +1,15 @@
-\# Inteligencia de amenazas
+# Inteligencia de amenazas
 
+Esta carpeta recopila información complementaria relacionada con amenazas utilizadas habitualmente por atacantes.
 
+Su función es aportar contexto adicional a los casos prácticos documentados en el proyecto principal.
 
-En esta carpeta se recopila información sobre amenazas comunes.
+## Contenido actual
 
+* Ransomware
 
+## Objetivo
 
-Sirve como contexto para entender los ataques y mejorar la defensa.
+Comprender el funcionamiento de amenazas reales, sus técnicas más habituales y las medidas defensivas que pueden aplicarse para reducir su impacto.
 
+Esta información sirve como apoyo al análisis realizado en los distintos escenarios SOC del repositorio.
