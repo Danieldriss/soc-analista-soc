@@ -1,8 +1,8 @@
-\# Caso 1 - Ataque de fuerza bruta SSH
+# Caso 1 - Ataque de fuerza bruta SSH
 
 
 
-\## 1. Contexto
+## 1. Contexto
 
 El servicio SSH permite el acceso remoto a sistemas Linux mediante autenticación de usuario y contraseña o claves.
 
@@ -12,11 +12,11 @@ Es un servicio crítico y uno de los principales objetivos de ataques automatiza
 
 
 
-\---
+---
 
 
 
-\## 2. Escenario simulado
+## 2. Escenario simulado
 
 Se ha simulado un servidor Linux con el puerto SSH expuesto.
 
@@ -26,11 +26,11 @@ Un atacante externo intenta acceder al sistema realizando múltiples intentos de
 
 
 
-\---
+---
 
 
 
-\## 3. Evidencias (logs simulados)
+## 3. Evidencias (logs simulados)
 
 
 
@@ -42,11 +42,11 @@ Mar 23 10:15:05 server sshd\[1234]: Failed password for admin from 192.168.1.50
 
 
 
-\---
+---
 
 
 
-\## 4. Análisis
+## 4. Análisis
 
 Se observa una alta frecuencia de intentos fallidos de autenticación.
 
@@ -64,35 +64,35 @@ Se identifica como un ataque de fuerza bruta.
 
 
 
-\---
+---
 
 
 
-\## 5. Detección
+## 5. Detección
 
 Se debe generar una alerta cuando:
 
 
 
-\- Se detecten múltiples intentos fallidos de login
+- Se detecten múltiples intentos fallidos de login
 
-\- Desde una misma IP
+- Desde una misma IP
 
-\- En un corto periodo de tiempo
+- En un corto periodo de tiempo
 
 
 
 Evento clave:
 
-\- "Failed password"
+- "Failed password"
 
 
 
-\---
+---
 
 
 
-\## 6. Respuesta
+## 6. Respuesta
 
 
 
@@ -100,25 +100,25 @@ Acciones recomendadas:
 
 
 
-1\. Validar la alerta
+1. Validar la alerta
 
-2\. Identificar la IP atacante
+2. Identificar la IP atacante
 
-3\. Revisar si ha habido accesos exitosos
+3. Revisar si ha habido accesos exitosos
 
-4\. Bloquear la IP
+4. Bloquear la IP
 
-5\. Revisar configuración SSH
+5. Revisar configuración SSH
 
-6\. Aplicar medidas de seguridad (MFA, claves SSH)
-
-
-
-\---
+6. Aplicar medidas de seguridad (MFA, claves SSH)
 
 
 
-\## 7. Explicación para estudio
+---
+
+
+
+## 7. Explicación para estudio
 
 Un ataque de fuerza bruta consiste en probar muchas combinaciones de contraseñas hasta encontrar una válida.
 
@@ -128,11 +128,11 @@ En los logs se identifica por:
 
 
 
-\- repetición de intentos fallidos
+- repetición de intentos fallidos
 
-\- misma IP
+- misma IP
 
-\- intervalos cortos
+- intervalos cortos
 
 
 
@@ -144,31 +144,31 @@ Es uno de los ataques más comunes contra servicios expuestos.
 
 
 
-\---
+---
 
 
 
-\## 8. Puntos clave
+## 8. Puntos clave
 
 
 
-\- SSH es un servicio crítico y muy atacado
+- SSH es un servicio crítico y muy atacado
 
-\- La repetición es el principal indicador
+- La repetición es el principal indicador
 
-\- La detección se basa en frecuencia + origen
+- La detección se basa en frecuencia + origen
 
-\- La respuesta debe ser rápida para evitar compromiso
-
-
-
-\---
+- La respuesta debe ser rápida para evitar compromiso
 
 
 
-\## Flujo del ataque
+---
 
 
 
-\[Atacante] → \[Servidor SSH] → \[Logs] → \[Detección] → \[Respuesta]
+## Flujo del ataque
+
+
+
+[Atacante] → \[Servidor SSH] → \[Logs] → \[Detección] → \[Respuesta]
 
